@@ -1,14 +1,15 @@
 class HiddenWord
 
-    attr_reader :display
-
     def initialize(word)
         @word = word
-        @display = @word.gsub(/./, "*")
     end
 
-    def word_length()
-        return @word.length
+    def display()
+        return @word.gsub(/./, "*")
+    end
+
+    def word_includes?(letter)
+        return @word.include?(letter)
     end
 
 end
