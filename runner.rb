@@ -11,7 +11,7 @@ player = Player.new(name)
 hidden_word = HiddenWord.new(word)
 game = Game.new(player, hidden_word)
 
-while !(game.is_lost?() || game.is_won?())
+until (game.is_lost?() || game.is_won?())
     puts game.hidden_word.display(game.guessed_letters)
     puts "Make a guess!"
     letter = gets.chomp
