@@ -11,7 +11,7 @@ class HiddenWordTest < MiniTest::Test
     end
 
     def test_display()
-        assert_equal("**********", @hidden_word.display())
+        assert_equal("**dd*n***n", @hidden_word.display(["d", "n"]))
     end
 
     def test_word_includes__true

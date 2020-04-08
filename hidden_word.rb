@@ -4,8 +4,10 @@ class HiddenWord
         @word = word
     end
 
-    def display()
-        return @word.gsub(/./, "*")
+    def display(guessed_letters)
+        result = ""
+        @word.each_char {|c| guessed_letters.include?(c) ? result += c : result += "*"}
+        return result
     end
 
     def word_includes?(letter)
