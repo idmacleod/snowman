@@ -10,8 +10,12 @@ class HiddenWordTest < MiniTest::Test
         @hidden_word = HiddenWord.new("paddington")
     end
 
-    def test_lengths_match()
-        assert(@hidden_word.word_length() == @hidden_word.display.length)
+    def test_display_is_right_length()
+        assert(@hidden_word.display.length == @hidden_word.word_length())
+    end
+
+    def test_display_all_stars()
+        assert_equal("**********", @hidden_word.display)
     end
 
 end

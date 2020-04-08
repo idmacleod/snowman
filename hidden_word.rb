@@ -4,8 +4,7 @@ class HiddenWord
 
     def initialize(word)
         @word = word
-        @display = ""
-        @word.each_char {|cstr| @display += "*"}
+        @display = @word.gsub(/./, "*")
     end
 
     def word_length()
